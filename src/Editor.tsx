@@ -51,6 +51,10 @@ const Editor: React.FC = () => {
         </button>
       </div>
       <EditorContent editor={editor} />
+      <div className="content-output">
+        <h3>Содержимое редактора (JSON):</h3>
+        <pre>{JSON.stringify(editor.getJSON(), null, 2)}</pre>
+      </div>
     </div>
   );
 };
